@@ -1,5 +1,6 @@
 package com.actionbarsherlock.app;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -129,7 +130,8 @@ public abstract class SherlockActivity extends Activity implements OnCreatePanel
         getSherlock().dispatchInvalidateOptionsMenu();
     }
 
-    public void supportInvalidateOptionsMenu() {
+    @SuppressLint("NewApi")
+	public void supportInvalidateOptionsMenu() {
         invalidateOptionsMenu();
     }
 
